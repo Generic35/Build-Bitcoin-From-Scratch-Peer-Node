@@ -7,7 +7,8 @@ class Block {
     this.lastHash = lastHash;
     this.hash = hash;
     this.data = data;
-    (this.nonce = nonce), (this.difficulty = difficulty);
+    this.nonce = nonce;
+    this.difficulty = difficulty;
   }
 
   static genesis() {
@@ -29,7 +30,7 @@ class Block {
       });
       hash = cryptoHash(timestamp, lastHash, data, nonce, difficulty);
     } while (
-      nonce < 100000 &&
+      // nonce < 100000 &&
       hash.substring(0, difficulty) !== '0'.repeat(difficulty)
     );
 
