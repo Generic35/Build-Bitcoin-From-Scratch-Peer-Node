@@ -162,7 +162,7 @@ describe('Wallet', () => {
               chain: blockchain.chain,
               address: wallet.publicKey,
             })
-          ).toEqual(recentTransaction.ouputMap[wallet.publicKey]);
+          ).toEqual(recentTransaction.outputMap[wallet.publicKey]);
         });
 
         describe('and there are outputs next to and after the recent transaction', () => {
@@ -197,9 +197,9 @@ describe('Wallet', () => {
                 address: wallet.publicKey,
               })
             ).toEqual(
-              recentTransaction.ouputMap[wallet.publicKey] +
-                sameBlockTransaction.outputMap[wallet.publicKey],
-              nextBlockTransaction.outputMap[wallet.publicKey]
+              recentTransaction.outputMap[wallet.publicKey] +
+                sameBlockTransaction.outputMap[wallet.publicKey] +
+                nextBlockTransaction.outputMap[wallet.publicKey]
             );
           });
         });
