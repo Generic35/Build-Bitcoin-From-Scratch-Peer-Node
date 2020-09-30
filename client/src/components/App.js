@@ -17,7 +17,7 @@ class App extends Component {
     const { address, balance } = this.state.walletInfo;
 
     return (
-      <div class="App">
+      <div className="App">
         <img className="logo" src={logo}></img>
         <br />
         <div>Welcome to the blockchain...</div>
