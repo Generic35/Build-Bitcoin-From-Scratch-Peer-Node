@@ -28,6 +28,9 @@ class App extends Component {
         <div>
           <Link to="/conduct-transaction">Conduct a transaction</Link>
         </div>
+        <div>
+          <Link to="/transaction-pool">Transaction Pool</Link>
+        </div>
         <br />
         <div className="WalletInfo">
           <div>Address: {address}</div>
