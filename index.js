@@ -14,7 +14,9 @@ const REDIS_URL = isDevelopment
   : 'redis://h:pe4f3d7eb3ffa4de5724ce5e54d03627cee25371bd3b7abb4503f09f5b35fd6c2@ec2-52-201-9-81.compute-1.amazonaws.com:20399';
 
 const DEFAULT_PORT = 3000;
-const ROOT_NODE_ADDRESS = `http://localhost:${DEFAULT_PORT}`;
+const ROOT_NODE_ADDRESS = isDevelopment
+  ? `http://localhost:${DEFAULT_PORT}`
+  : 'https://floating-dusk-99794.herokuapp.com';
 
 const app = express();
 const blockchain = new Blockchain();
